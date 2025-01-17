@@ -3,18 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>직업별 책 추천</title>
+    <title>직업 추가 시스템</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>직업별 책 추천</h1>
-    <p>당신의 직업을 입력하세요:</p>
+    <h1>직업 추천 및 추가</h1>
+
+    <!-- 기존 직업 추천 폼 -->
     <form id="job-form">
-        <input type="text" id="job-input" placeholder="예: 개발자, 디자이너, 교사" required>
+        <input type="text" id="job-input" placeholder="직업 입력" required>
         <button type="submit">추천 받기</button>
     </form>
-    <button id="refresh-button" style="display:none;">새로 추천 받기</button>
-    <div class="book-list" id="book-list"></div>
+    <div id="book-list" class="book-list"></div>
+
+    <!-- 새 직업 추가 폼 -->
+    <h2>새로운 직업 추가</h2>
+    <form id="add-job-form">
+        <input type="text" id="new-job-name" placeholder="직업명" required>
+        <input type="text" id="new-job-category" placeholder="카테고리" required>
+        <input type="text" id="new-job-keywords" placeholder="키워드 (쉼표로 구분)" required>
+        <button type="submit">직업 추가</button>
+    </form>
+
+    <div id="add-job-status"></div>
+
     <script src="bookFinder.js"></script>
 </body>
 </html>
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>나의 책 찾기기</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>직업 추천 및 추가</h1>
+
+    <!-- 기존 직업 추천 폼 -->
+    <form id="job-form">
+        <input type="text" id="job-input" placeholder="직업 입력" required>
+        <button type="submit">추천 받기</button>
+    </form>
+    <div id="book-list" class="book-list"></div>
+
+    <!-- 새 직업 추가 폼 -->
+    <h2>새로운 직업 추가</h2>
+    <form id="add-job-form">
+        <input type="text" id="new-job-name" placeholder="직업명" required>
+        <input type="text" id="new-job-category" placeholder="카테고리" required>
+        <input type="text" id="new-job-keywords" placeholder="키워드 (쉼표로 구분)" required>
+        <button type="submit">직업 추가</button>
+    </form>
+
+    <div id="add-job-status"></div>
+
+    <script src="bookFinder.js"></script>
+</body>
+</html>
+
